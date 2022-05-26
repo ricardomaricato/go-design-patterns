@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 type email struct {
 	from, to, subject, body string
@@ -51,5 +54,6 @@ func main() {
 			To("bar@baz.com").
 			Subject("Meeting").
 			Body("Hello, do you want to meet?")
+		fmt.Println(b.email)
 	})
 }
