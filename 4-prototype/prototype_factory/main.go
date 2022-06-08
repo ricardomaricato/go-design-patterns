@@ -40,21 +40,18 @@ var auxOffice = Employee{
 
 // utility method for configuring emp
 //   ↓ lowercase
-func newEmployee(proto *Employee,
-	name string, suite int) *Employee {
+func newEmployee(proto *Employee, name string, suite int) *Employee {
 	result := proto.DeepCopy()
 	result.Name = name
 	result.Office.Suite = suite
 	return result
 }
 
-func NewMainOfficeEmployee(
-	name string, suite int) *Employee {
+func NewMainOfficeEmployee(name string, suite int) *Employee {
 	return newEmployee(&mainOffice, name, suite)
 }
 
-func NewAuxOfficeEmployee(
-	name string, suite int) *Employee {
+func NewAuxOfficeEmployee(name string, suite int) *Employee {
 	return newEmployee(&auxOffice, name, suite)
 }
 
